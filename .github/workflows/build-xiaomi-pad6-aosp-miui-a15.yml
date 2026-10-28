@@ -99,6 +99,7 @@ jobs:
       CCACHE_NOHASHDIR: "true"
       CCACHE_HARDLINK: "true"
       ENABLE_DROIDSPACES: "false"
+      DISABLE_SUSFS: "true"
     steps:
       - name: ⏰ Checkout repository
         uses: actions/checkout@v7
