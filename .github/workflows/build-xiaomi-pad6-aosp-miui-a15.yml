@@ -147,8 +147,9 @@ jobs:
           
       - name: 🩹 Create Droidspaces Config
         run: |
-         touch arch/arm64/configs/droidspaces.config
-         echo "# Dummy config" > arch/arm64/configs/droidspaces.config
+          mkdir -p $GITHUB_WORKSPACE/device_kernel/arch/arm64/configs
+          touch $GITHUB_WORKSPACE/device_kernel/arch/arm64/configs/droidspaces.config
+          echo "# Dummy config" > $GITHUB_WORKSPACE/device_kernel/arch/arm64/configs/droidspaces.config
          
       - name: 🚀 Build Process
         uses: ./.github/workflows/build-process
