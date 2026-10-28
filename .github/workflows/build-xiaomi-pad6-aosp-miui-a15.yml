@@ -110,11 +110,11 @@ jobs:
         uses: ./.github/workflows/build-ready
 
       - name: 🪝 Patch Kernel of SUSFS
-        uses: ./.github/workflows/patch-susfs
-
+       #  uses: ./.github/workflows/patch-susfs
+        if: false
       - name: 🔗 Patch for no-kprobe
-        uses: ./.github/workflows/patch-no-kprobe
-
+        # uses: ./.github/workflows/patch-no-kprobe
+        if: false
       - name: 🪛 Extra Kernel Options
         run: |
           # Only ${{ env.DEVICE_NAME }} use it.
@@ -122,14 +122,16 @@ jobs:
           # Nothing
 
       - name: 🧰 Patch Kernel of Re:Kernel
-        uses: ./.github/workflows/patch-rekernel
+        # uses: ./.github/workflows/patch-rekernel
+        if: false
 
       - name: 💿 Patch Kernel of Droidspaces
-        uses: ./.github/workflows/patch-droidspaces
-
+        # uses: ./.github/workflows/patch-droidspaces
+        if: false
+        
       - name: 🔒 Patch Kernel of Baseband Guard
-        uses: ./.github/workflows/patch-baseband-guard
-
+        # uses: ./.github/workflows/patch-baseband-guard
+        if: false
       - name: 🏷️ Set Build User and Host
         run: |
           echo "KBUILD_BUILD_USER=github" >> $GITHUB_ENV
