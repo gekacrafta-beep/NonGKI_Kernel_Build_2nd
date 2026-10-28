@@ -112,9 +112,13 @@ jobs:
       - name: 🪝 Patch Kernel of SUSFS
        #  uses: ./.github/workflows/patch-susfs
         if: false
+        run: echo "Skipping"
+        
       - name: 🔗 Patch for no-kprobe
         # uses: ./.github/workflows/patch-no-kprobe
         if: false
+        run: echo "Skipping"
+        
       - name: 🪛 Extra Kernel Options
         run: |
           # Only ${{ env.DEVICE_NAME }} use it.
@@ -124,14 +128,18 @@ jobs:
       - name: 🧰 Patch Kernel of Re:Kernel
         # uses: ./.github/workflows/patch-rekernel
         if: false
+        run: echo "Skipping"
 
       - name: 💿 Patch Kernel of Droidspaces
         # uses: ./.github/workflows/patch-droidspaces
         if: false
+        run: echo "Skipping"
         
       - name: 🔒 Patch Kernel of Baseband Guard
         # uses: ./.github/workflows/patch-baseband-guard
         if: false
+        run: echo "Skipping"
+        
       - name: 🏷️ Set Build User and Host
         run: |
           echo "KBUILD_BUILD_USER=github" >> $GITHUB_ENV
