@@ -98,7 +98,7 @@ jobs:
       CCACHE_COMPILERCHECK: "%compiler% -dumpmachine; %compiler% -dumpversion"
       CCACHE_NOHASHDIR: "true"
       CCACHE_HARDLINK: "true"
-
+      ENABLE_DROIDSPACES: "false"
     steps:
       - name: ⏰ Checkout repository
         uses: actions/checkout@v7
